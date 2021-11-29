@@ -39,7 +39,8 @@ body {
 }
 .form-v5-content  {
 	background: rgb(159, 207, 216);
-	width: 600px;
+	width: 400px;
+  height:550px; 
 	border-radius: 8px;
 	-o-border-radius: 8px;
 	-ms-border-radius: 8px;
@@ -51,9 +52,10 @@ body {
 	font-weight: 400;
 	position: relative;
 	font-size: 18px;
+  
 }
 .form-v5-content .form-detail {
-	padding: 30px 45px 30px 45px;
+	padding: 50px;
 	position: relative;
 }
 .form-detail h2 {
