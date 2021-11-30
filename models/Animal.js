@@ -39,9 +39,16 @@ Animal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    temperment: {
+    temperament: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
   },
   {
