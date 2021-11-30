@@ -4,7 +4,7 @@ const sequelize = require("./config/connection");
 const path = require("path");
 
 // add handlebars const code
-// add connect-session-sequilize express-session, tried installing, getting ERR!
+// add connect-session-sequelize, tried installing, getting ERR!
 
 const app = express();
 const PORT = process.env.PORT || 3001;
