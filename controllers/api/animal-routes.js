@@ -116,6 +116,24 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/", (req, res) => {})
+router.delete("/:id", (req, res) => {
+  Animal.destroy({
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+    .then(dbAnimalData => {
+      if (!dbAnimalData) {
+        res.status(404).json({ message: "No animal was found with this id"});
+        return;
+      }
+      res.json(dbAnimalData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
