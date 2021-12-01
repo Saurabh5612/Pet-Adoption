@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Animal } = require("../../models");
+const { User, Animal } = require("../models");
 
 
 router.get('/login', (req, res) => {
