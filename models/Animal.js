@@ -23,7 +23,7 @@ Animal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    name: {
+    animal_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
