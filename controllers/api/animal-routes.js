@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Animal } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 router.get('/', (req, res) => {
   Animal.findAll({
@@ -64,7 +65,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post ("/", withAuth, (req, res) => {
   Animal.create({
     species: req.body.species,
     age: req.body.age, 
@@ -74,7 +75,7 @@ router.post("/", (req, res) => {
     location_state: req.body.location_state,
     maintenance: req.body.maintenance,
     temperament: req.body.temperament,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
   })
   .then(dbAnimalData => res.json(dbAnimalData))
   .catch(err => {
@@ -83,7 +84,7 @@ router.post("/", (req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Animal.update(
     {
       species: req.body.species,
@@ -94,7 +95,6 @@ router.put("/:id", (req, res) => {
       location_state: req.body.location_state,
       maintenance: req.body.maintenance,
       temperament: req.body.temperament,
-      user_id: req.body.user_id
     },
     {
       where: {
@@ -115,7 +115,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Animal.destroy({
       where: {
         id: req.params.id
