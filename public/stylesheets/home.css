@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../images/pet1.jpg');
+    background-image: url('/images/pet1.jpg');
     margin-bottom: 200px;
     height: 100%;
     background-repeat: no-repeat;
