@@ -1,6 +1,11 @@
 body {
+<<<<<<< HEAD:public/css/home.css
     background-image: url('../../images/pet1.jpg');
     margin-bottom: 2000%;
+=======
+    background-image: url('/images/pet1.jpg');
+    margin-bottom: 200px;
+>>>>>>> 9fbc15320c54e1bdca87ffb66b96ffd19a61415e:public/stylesheets/home.css
     height: 100%;
     background-repeat: no-repeat;
     padding-right: 35%;
