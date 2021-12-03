@@ -1,3 +1,5 @@
+const { post } = require("../../controllers");
+
 $(document).ready(function() {
     var signUpForm = $("form#signup");
     var emailInput = $("input#signup_email");
@@ -6,23 +8,27 @@ $(document).ready(function() {
     signUpForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {
+        username: usernameInput.val().trim(),
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
       };
   
-      // validate there's an email/password entered on submit //
-      if (!userData.email || !userData.password) {
+      // validate there's a username/email/password entered on submit //
+      if (!userData.username || !userData.email || !userData.password) {
         return;
       }
       // If validated, run signUpUser //
-      signUpUser(userData.email, userData.password);
+      signUpUser(userData.username, userData.email, userData.password);
+      usernameInput.val("");
       emailInput.val("");
       passwordInput.val("");
     });
   
     // Does a post to /api/signup - if successful redirect to the members dash
-    function signUpUser(email, password) {
-      $.post("/api/signup", {
+    function signUpUser(username, email, password) {
+      $.post("/api/users", {
+        method: "post", 
+        username: username,
         email: email,
         password: password
       }).then(function(data) {
