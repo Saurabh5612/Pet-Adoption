@@ -16,15 +16,15 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-md-3"></div>
+      <div class="col-md-10"></div>
       <div class="col-md-4">
         <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
           <div class="card-body">
-            <h3 class="card-title"><strong>Welcome to <br>Pets Adoption!</strong></h3>
-            <p class="card-text text-center">
+            <h3 class="card-title"><strong>Welcome to <br>Pet Adoption!</strong></h3>
+            <p class="card-text text-left">
               If you're not sure what kind of pet you're looking for, we can help!
               </br></br>
-              Sign up or sign in to take our "Pet Matching"survey. To search our adoptable pets, click <a target="_blank" href="/pets">here!</a></p>
+              Sign up or sign in to search for pets near you. </p>
               <hr>
               <button type="button" id="signin_button" class="btn btn-info" data-toggle="modal" data-target="#signin_modal">
                 Sign in
@@ -38,16 +38,9 @@
     </div>  
   </div>
 
-  <nav class="navbar fixed-bottom navbar-light bg-light text-center">
-    <div class="container text-center">
-      <h5 class="col-md-12 col-sm-12 col-xs-12"><a class="footer" href="/">Pets Adoption</a></h5>
-    </div>
-  </nav>
-  
-
   <!-- Signup Modal -->
   <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="signup_modal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+   <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="signup_modal_title">New User Signup</h5>
@@ -55,9 +48,9 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-         <div class="input-group flex-nowrap">
+        <div class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping"></span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="signup_username" aria-describedby="addon-wrapping">
         </div>
         <div class="modal-body">
           <form id="signup" name="signup" method="post" action="signup">

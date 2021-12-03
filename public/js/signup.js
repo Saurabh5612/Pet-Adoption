@@ -1,7 +1,7 @@
-const { post } = require("../../controllers");
-
 $(document).ready(function() {
+
     var signUpForm = $("form#signup");
+    var usernameInput = $("input#signup_username");
     var emailInput = $("input#signup_email");
     var passwordInput = $("input#signup_password");
   
@@ -41,3 +41,7 @@ $(document).ready(function() {
       $("#alert").fadeIn(500);
     }
   });
+
+  document.querySelector(".input-group").addEventListener("submit", signUpForm);
+
+  
