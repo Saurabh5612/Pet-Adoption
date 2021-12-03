@@ -27,7 +27,6 @@ $(document).ready(function() {
     // Does a post to /api/signup - if successful redirect to the members dash
     function signUpUser(username, email, password) {
       $.post("/api/users", {
-        method: "post", 
         username: username,
         email: email,
         password: password
@@ -40,8 +39,6 @@ $(document).ready(function() {
       $("#alert .msg").text(err.responseJSON);
       $("#alert").fadeIn(500);
     }
-  });
-
-  document.querySelector(".input-group").addEventListener("submit", signUpForm);
+});
 
   
