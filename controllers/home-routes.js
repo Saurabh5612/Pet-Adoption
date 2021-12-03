@@ -10,6 +10,14 @@ router.get("/", (req, res) => {
   res.render("homepage");
 });
 
+router.get('/add-adopt', (req, res) => {
+  if(req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render('add-adopt');
+});
+
 router.get('/login', (req, res) => {
   if(req.session.loggedIn) {
     res.redirect("/dashboard");
@@ -22,8 +30,8 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/pets', (req, res) => {
-  res.render('pets');
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
 });
 
 module.exports = router;
