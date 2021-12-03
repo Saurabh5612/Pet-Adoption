@@ -4,7 +4,7 @@ const { User, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-  Post.findAll({
+  Animal.findAll({
     where: {
       user_id: req.session.user_id
     },
@@ -18,11 +18,17 @@ router.get('/', withAuth, (req, res) => {
       "location_state",
       "maintenance",
       "temperament",
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ["username"]
+      }
     ]
   })
   .then(dbPostData => {
-    const animals = dbPostData.map(animal => animal.get({ plain: true }));
-    res.render('dashboard', { animals, loggedIn: true });
+    const animals = dbAnimalData.map(animal => animal.get({ plain: true }));
+    res.render('pets', { animals, loggedIn: true });
   })
   .catch(err => {
     console.log(err);

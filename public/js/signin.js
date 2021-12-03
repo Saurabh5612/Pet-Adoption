@@ -25,7 +25,7 @@ async function loginFormHander(event) {
 document.querySelector(".login-form").addEventListener("submit", loginFormHander);
 
 
-
+// CODE NOT WORKING CORRECTLY - REPLACED
 // $(document).ready(function() {
 //     var loginForm = $("#signin");
 //     var emailInput = $("#signin_email");

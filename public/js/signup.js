@@ -28,11 +28,8 @@ async function signupFormHandler(event) {
 document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
 
 
-
-
-
+// CODE NOT WORKING CORRECTLY - REPLACED
 // $(document).ready(function() {
-
 //     var signUpForm = $("form#signup");
 //     var usernameInput = $("input#signup-username");
 //     var emailInput = $("input#signup-email");
