@@ -1,4 +1,4 @@
-async function newFormHandler(event) {
+async function newPetHandler(event) {
   event.preventDefault();
 
   const animal_name = document.querySelector('input[name="pet_name"]').value;
@@ -12,7 +12,7 @@ async function newFormHandler(event) {
 
   if(email && password) {
     const response = await fetch("api/animals", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         species,
         age,
@@ -34,5 +34,5 @@ async function newFormHandler(event) {
     }
   }
 }
-document.querySelector(".add-pet-form").addEventListener("submit", loginFormHander);
+document.querySelector(".add-pet-form").addEventListener("submit", newPetHandler);
 
