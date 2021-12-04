@@ -30,14 +30,14 @@
             <ul>
               <article class="animal">
                 <div>
-                  <a href="/animals/{{this.id}}" target="_blank">{{this.animal_name}}</a>
-                </div>
-                <div class="meta">
-                  {{this.species}}, {{this.age}}, {{this.gender}}, {{this.animal_name}},
-                  {{this.location_city}}, {{this.location_state}}, {{this.maintenaance}},
-                  {{this.temperament}}, {{this.user.username}}
-            
-                  <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a>
+                  {{this.animal_name}} is a {{this.gender}} {{this.species}} and {{this.age}} year(s) old. <br>
+                   {{this.animal_name}} is located in {{this.location_city}}, {{this.location_state}}. <br>
+                   They are of {{this.maintenance}} maintenance and {{this.temperament}}! <br>
+                 
+                  Interested party: {{user.username}}
+                  <div>
+                    <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a><br><br>
+                  </div>
                 </div>
               </article>
             </ul>
@@ -58,30 +58,30 @@
             <div class="modal-body">
               <form id="add-pet" name="add-pet" method="add-pet" action="add-pet" class="add-pet-form">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_name" placeholder="Pet Name">
+                  <input name="pet_name" type="text" class="form-control" id="pet_name" placeholder="Pet Name">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_species" placeholder="Type of Animal">
+                  <input name="pet_species" type="text" class="form-control" id="pet_species" placeholder="Type of Animal">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_age" placeholder="Age">
+                  <input name="pet_age" type="text" class="form-control" id="pet_age" placeholder="Age">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_gender" placeholder="Female or Male">
+                  <input name="pet_gender" type="text" class="form-control" id="pet_gender" placeholder="Female or Male">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_city" placeholder="Location: City">
+                  <input name="pet_city" type="text" class="form-control" id="pet_city" placeholder="Location: City">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_state" placeholder="Location: State">
+                  <input name="pet_state" type="text" class="form-control" id="pet_state" placeholder="Location: State">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_maintenance" placeholder="Maintenance (low, medium, high)">
+                  <input name="pet_maintenance" type="text" class="form-control" id="pet_maintenance" placeholder="Maintenance (low, medium, high)">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="pet_temperament" placeholder="Temperament (ex: hyper)">
+                  <input name="pet_temperament" type="text" class="form-control" id="pet_temperament" placeholder="Temperament (ex: hyper)">
                 </div>
-                <a href="/addadopt" id="adopt_button" class="btn btn-info">Add Pet</a>
+                <button type="submit" id="adopt_button" class="btn btn-info">Add Pet</button>
               </form>
             </div>
           </div>

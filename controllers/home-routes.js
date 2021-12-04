@@ -3,10 +3,10 @@ const { User, Animal } = require("../models");
 
 
 router.get("/", (req, res) => {
-  if(req.session.loggedIn) {
-    res.redirect("/dashboard");
-    return;
-  }
+  // if(req.session.loggedIn) {
+  //   res.redirect("/dashboard");
+  //   return;
+  // }
   res.render("homepage");
 });
 

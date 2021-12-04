@@ -1,5 +1,6 @@
 body {
     background-image: url('/images/pet1.png');
+    background-size: auto;
     margin-bottom: 200px;
     height: 100%;
     background-repeat: no-repeat;
