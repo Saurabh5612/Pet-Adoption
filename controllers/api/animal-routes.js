@@ -95,6 +95,7 @@ router.put("/:id", withAuth, (req, res) => {
       location_state: req.body.location_state,
       maintenance: req.body.maintenance,
       temperament: req.body.temperament,
+      user_id: req.session.user_id
     },
     {
       where: {

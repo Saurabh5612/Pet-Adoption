@@ -1,10 +1,3 @@
-async function loadDashboard() {
-  const response = await fetch("api/dashboard", {
-    method: "GET",
-    headers: { "Content-Type": "application/json" }
-  });
-}
-
 async function loginFormHander(event) {
   event.preventDefault();
 
@@ -24,7 +17,6 @@ async function loginFormHander(event) {
     // check the response status
     if (response.ok) {
       window.location.replace("/pets");
-      // loadDashboard();
     } else {
       alert(response.statusText);
     }

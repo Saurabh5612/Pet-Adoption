@@ -33,11 +33,9 @@
                   <p class="font-weight-bold">{{this.animal_name}}</p>
                   {{this.animal_name}} is a {{this.gender}} {{this.species}} and {{this.age}} year(s) old. <br>
                    {{this.animal_name}} is located in {{this.location_city}}, {{this.location_state}}. <br>
-                   They are of {{this.maintenance}} maintenance and {{this.temperament}}! <br>
-                 
-                  Interested party: {{user.username}}
+                   They are {{this.maintenance}} maintenance and {{this.temperament}}! <br>
                   <div>
-                    <button type="submit" id="adopt_button" class="btn btn-info">Interested in Adopting</button><br><br>
+                    <button type="submit" id="adopt_button" class="btn btn-info">Interested in Adopting!</button><br><br>
                   </div>
                 </div>
               </article>
@@ -90,6 +88,15 @@
       </div>    
     </div>
   </div>
+
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+              <h4>Pets You're Interested In!</h4>
+          </div>
+        </div>
 
 <script src="/js/add-adopt.js"></script>
 <script src="/js/interested.js"></script>
