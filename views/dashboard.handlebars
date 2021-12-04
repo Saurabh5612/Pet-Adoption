@@ -14,34 +14,83 @@
 
 <body>
 
-  <div class="card">  
-    <div class="card-body">
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-            <h1 class="display-4">Welcome!</h1>
+{{!--  Animal Adoption List card --}}
+  <div class="row">
+    <div class="col-md-7">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+              <h4>Adoption List</h4>
+          </div>
+        </div>
+
+        <div>
+          <ol class="animal-list">
+            {{#each animals}}
+            <ul>
+              <article class="animal">
+                <div>
+                  <a href="/animals/{{this.id}}" target="_blank">{{this.animal_name}}</a>
+                </div>
+                <div class="meta">
+                  {{this.species}}, {{this.age}}, {{this.gender}}, {{this.animal_name}},
+                  {{this.location_city}}, {{this.location_state}}, {{this.maintenaance}},
+                  {{this.temperament}}, {{this.user.username}}
+            
+                  <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a>
+                </div>
+              </article>
+            </ul>
+            {{/each}}
+          </ol>
         </div>
       </div>
-      <div>
-      <a href="/addadopt" id="addadopt_button" class="btn btn-info">Add Pet for Adoption</a>
-
-        <ol class="animal-list">
-          <li>
-            <article class="animal">
-              <div>
-                <a href="/animals/{{animal.id}}" target="_blank">{{animal.animal_name}}</a>
-              </div>
-              <div class="meta">
-                {{animal.species}}, {{age}}, {{gender}}, {{animal_name}},
-                {{location_city}}, {{location_state}}, {{maintenaance}},
-                {{temperament}}, {{user.username}}
-                <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a>
-              </div>
-            </article>
-          </li>
-        </ol>
-      </div>
+    </div>
+  
+  {{!-- Pet for Adoption Card --}}
+    <div class="col">
+      <div class="card">
+        <div class="d-flex justify-content-center">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signup_modal_title">Put Pet up for Adoption</h5>
+            </div>
+            <div class="modal-body">
+              <form id="add-pet" name="add-pet" method="add-pet" action="add-pet" class="add-pet-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_name" placeholder="Pet Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_species" placeholder="Type of Animal">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_age" placeholder="Age">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_gender" placeholder="Female or Male">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_city" placeholder="Location: City">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_state" placeholder="Location: State">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_maintenance" placeholder="Maintenance (low, medium, high)">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pet_temperament" placeholder="Temperament (ex: hyper)">
+                </div>
+                <a href="/addadopt" id="adopt_button" class="btn btn-info">Add Pet</a>
+              </form>
+            </div>
+          </div>
+        </div> 
+      </div>    
     </div>
   </div>
+
+
 
 </body>
 </html>

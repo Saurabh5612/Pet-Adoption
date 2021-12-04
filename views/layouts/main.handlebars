@@ -27,23 +27,27 @@
         <li class="nav-item">
           <a class="nav-link" href="/pets">Pet Dashboard</a>
         </li>
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a class="nav-link" href="/add-adopt" >Add Pet for Adoption</a>
+        </li> --}}
+        {{#if loggedIn}}
+        <li class="nav-item">
+          <a class="nav-link" id="logout">Log Out</button>
         </li>
+        {{else}}
         <li class="nav-item">
           <a class="nav-link" href="/login" >Sign In</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/signup" >Sign Up</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id="logout">Log Out</button>
-        </li>
+        {{/if}}
       </ul>
     </div>
   </nav>
   
   {{{ body }}}
+
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
