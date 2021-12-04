@@ -10,7 +10,8 @@ async function newPetHandler(event) {
   const maintenance = document.querySelector('input[name="pet_maintenance"]').value;
   const temperament = document.querySelector('input[name="pet_temperament"]').value;
 
-  if(email && password) {
+  if(species && age && gender && animal_name && location_city &&
+     location_state && maintenance && temperament) {
     const response = await fetch("api/animals", {
       method: "POST",
       body: JSON.stringify({
@@ -28,7 +29,7 @@ async function newPetHandler(event) {
 
     // check the response status
     if (response.ok) {
-      document.location.replace("/dashboard");
+      window.location.reload();
     } else {
       alert(response.statusText);
     }

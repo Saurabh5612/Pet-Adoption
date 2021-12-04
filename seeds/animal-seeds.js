@@ -1,7 +1,7 @@
 const { Animal } = require("../models");
 
 const animalData = [
-  { // 5 dogs
+  { // 3 dogs
     species: "dog",
     age: 2,
     gender: "male",
@@ -31,27 +31,7 @@ const animalData = [
     maintenance: "high",
     temperament: "curious"
   },
-  {
-    species: "dog",
-    age: 5,
-    gender: "male",
-    animal_name: "Fang",
-    location_city: "Sacramento",
-    location_state: "California",
-    maintenance: "low",
-    temperament: "gluttonous"
-  },
-  {
-    species: "dog",
-    age: 1,
-    gender: "female",
-    animal_name: "Sophie",
-    location_city: "Richmond",
-    location_state: "Virginia",
-    maintenance: "high",
-    temperament: "hyper"
-  },
-  { // 5 cats
+  { // 3 cats
     species: "cat",
     age: 1,
     gender: "female",
@@ -81,27 +61,7 @@ const animalData = [
     maintenance: "high",
     temperament: "calm"
   },
-  { 
-    species: "cat",
-    age: 4,
-    gender: "male",
-    animal_name: "Shadow",
-    location_city: "Illinois",
-    location_state: "Chicago",
-    maintenance: "medium",
-    temperament: "gluttonous"
-  },
-  { 
-    species: "cat",
-    age: 6,
-    gender: "female",
-    animal_name: "Sophie",
-    location_city: "Philadelphia",
-    location_state: "Pennsylvania",
-    maintenance: "low",
-    temperament: "calm"
-  },
-  { // 3 birds
+  { // 2 birds
     species: "bird",
     age: 1,
     gender: "female",
@@ -113,16 +73,6 @@ const animalData = [
   },
   { 
     species: "bird",
-    age: 3,
-    gender: "male",
-    animal_name: "Remy",
-    location_city: "Richmond",
-    location_state: "Virginia",
-    maintenance: "medium",
-    temperament: "calm"
-  },
-  { 
-    species: "bird",
     age: 6,
     gender: "male",
     animal_name: "Ari",
@@ -131,7 +81,7 @@ const animalData = [
     maintenance: "medium",
     temperament: "loud"
   },
-  { // 2 snakes
+  { // 1 snake
     species: "snake",
     age: 3,
     gender: "male",
@@ -140,16 +90,6 @@ const animalData = [
     location_state: "Nevada",
     maintenance: "high",
     temperament: "gluttonous"
-  },
-  { 
-    species: "snake",
-    age: 5,
-    gender: "female",
-    animal_name: "Winnie",
-    location_city: "Sacramento",
-    location_state: "California",
-    maintenance: "low",
-    temperament: "calm"
   },
   { // 1 lizard
     species: "lizard",

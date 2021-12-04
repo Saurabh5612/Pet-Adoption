@@ -30,13 +30,14 @@
             <ul>
               <article class="animal">
                 <div>
+                  <p class="font-weight-bold">{{this.animal_name}}</p>
                   {{this.animal_name}} is a {{this.gender}} {{this.species}} and {{this.age}} year(s) old. <br>
                    {{this.animal_name}} is located in {{this.location_city}}, {{this.location_state}}. <br>
                    They are of {{this.maintenance}} maintenance and {{this.temperament}}! <br>
                  
                   Interested party: {{user.username}}
                   <div>
-                    <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a><br><br>
+                    <button type="submit" id="adopt_button" class="btn btn-info">Interested in Adopting</button><br><br>
                   </div>
                 </div>
               </article>
@@ -91,6 +92,6 @@
   </div>
 
 <script src="/js/add-adopt.js"></script>
-
+<script src="/js/interested.js"></script>
 </body>
 </html>

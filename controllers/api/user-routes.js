@@ -57,18 +57,23 @@ router.post("/", (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+  console.log("req", req.body.email)
+  console.log("req", req.body.password)
   User.findOne({
     where: {
       email: req.body.email
     }
   }).then(dbUserData => {
+    console.log("I am in dev", dbUserData)
     if (!dbUserData) {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
 
-    const validPassword = dbUserData.checkPassword(req.body.password);
-    if (!validPassword) {
+    const validPassword = dbUserData.password;
+    console.log("validPassword", validPassword)
+    if (validPassword !== req.body.password) {
+      console.log("I have bad password")
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
