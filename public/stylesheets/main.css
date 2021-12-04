@@ -24,3 +24,8 @@ body {
   .footer:hover {
     color: white;
   }
+
+  .scroll {
+    height:445px;
+    overflow-y: scroll;
+  }
