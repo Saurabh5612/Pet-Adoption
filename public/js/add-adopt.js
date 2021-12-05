@@ -9,6 +9,7 @@ async function newPetHandler(event) {
   const location_state = document.querySelector('input[name="pet_state"]').value;
   const maintenance = document.querySelector('input[name="pet_maintenance"]').value;
   const temperament = document.querySelector('input[name="pet_temperament"]').value;
+  
 
   if(species && age && gender && animal_name && location_city &&
      location_state && maintenance && temperament) {

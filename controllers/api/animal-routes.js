@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Animal } = require("../../models");
 const withAuth = require("../../utils/auth");
+var toConstantCase = require('to-constant-case');
 
 router.get('/', (req, res) => {
   Animal.findAll({
@@ -54,7 +55,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbAnimalData => {
       if (!dbAnimalData) {
-        res.status(404).json({ message: "There is no animal with this id"});
+        res.status(404).json({ message: toConstantCase("There is no animal with this id")});
         return;
       }
       res.json(dbAnimalData);

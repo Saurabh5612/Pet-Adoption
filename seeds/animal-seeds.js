@@ -1,7 +1,7 @@
 const { Animal } = require("../models");
 
 const animalData = [
-  { // 3 dogs
+  { // 2 dogs
     species: "dog",
     age: 2,
     gender: "male",
@@ -21,17 +21,7 @@ const animalData = [
     maintenance: "medium",
     temperament: "calm"
   },
-  {
-    species: "dog",
-    age: 1,
-    gender: "female",
-    animal_name: "Eliza",
-    location_city: "Washington",
-    location_state: "DC",
-    maintenance: "high",
-    temperament: "curious"
-  },
-  { // 3 cats
+  { // 2 cats
     species: "cat",
     age: 1,
     gender: "female",
@@ -39,7 +29,7 @@ const animalData = [
     location_city: "Richmond",
     location_state: "Virginia",
     maintenance: "high",
-    temperament: "hyper"
+    temperament: "calm"
   },
   { 
     species: "cat",
@@ -51,27 +41,7 @@ const animalData = [
     maintenance: "medium",
     temperament: "curious"
   },
-  { 
-    species: "cat",
-    age: 10,
-    gender: "male",
-    animal_name: "Cloud",
-    location_city: "Reno",
-    location_state: "Nevada",
-    maintenance: "high",
-    temperament: "calm"
-  },
-  { // 2 birds
-    species: "bird",
-    age: 1,
-    gender: "female",
-    animal_name: "Madeline",
-    location_city: "Houston",
-    location_state: "Texas",
-    maintenance: "high",
-    temperament: "hyper"
-  },
-  { 
+  { // 1 bird
     species: "bird",
     age: 6,
     gender: "male",

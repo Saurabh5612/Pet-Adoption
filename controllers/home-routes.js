@@ -3,6 +3,10 @@ const { User, Animal } = require("../models");
 
 
 router.get("/", (req, res) => {
+  if(req.session.loggedIn) {
+    res.redirect("/pets");
+    return;
+  }
   res.render("homepage");
 });
 
@@ -21,5 +25,6 @@ router.get('/signup', (req, res) => {
 router.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
+
 
 module.exports = router;
