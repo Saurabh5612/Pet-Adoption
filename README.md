@@ -10,6 +10,7 @@ Technnologies used: Node.js, Express.js, Handlebars.js, MySQL, Sequelize, Heroku
 
 ## Pet Adoption Access
 The following link navigates to the team project: https://guarded-basin-05749.herokuapp.com/
+demo: https://watch.screencastify.com/v/rfbCdeAPcxhWccic56vn
 
 ## Screenshots
 When the user navigates to the page, the following homepage appears.
