@@ -24,20 +24,18 @@
           </div>
         </div>
 
-        <div>
-          <ol class="animal-list">
+        <div >
+          <ol class="animal-list scroll">
             {{#each animals}}
             <ul>
               <article class="animal">
-                <div>
+                <div class="animal-list">
+                  <p class="font-weight-bold pet-name">{{this.animal_name}}</p>
                   {{this.animal_name}} is a {{this.gender}} {{this.species}} and {{this.age}} year(s) old. <br>
                    {{this.animal_name}} is located in {{this.location_city}}, {{this.location_state}}. <br>
-                   They are of {{this.maintenance}} maintenance and {{this.temperament}}! <br>
-                 
-                  Interested party: {{user.username}}
-                  <div>
-                    <a href="/adopt" id="adopt_button" class="btn btn-info">Interested in Adopting</a><br><br>
-                  </div>
+                   They are {{this.maintenance}} maintenance and {{this.temperament}}! <br>
+                    Put up for Adoption By: {{user.username}} <br>
+                    <button type="submit" id="adopt_button" class="btn btn-info adopt-button">Interested in Adopting!</button><br><br>
                 </div>
               </article>
             </ul>
@@ -91,6 +89,6 @@
   </div>
 
 <script src="/js/add-adopt.js"></script>
-
+<script src="/js/interested.js"></script>
 </body>
 </html>

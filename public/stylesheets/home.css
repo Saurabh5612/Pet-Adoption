@@ -1,10 +1,11 @@
 body {
-    background-image: url('	https://www.ccspca.com/wp-content/uploads/2015/02/lulu-dog.jpg');
-    background-size: auto;
+    background-image: url('../images/pet1.jpg');
+    background-size: 120%;
+    background-position: center;
     margin-bottom: 200px;
     height: 100%;
     background-repeat: no-repeat;
-    padding-right: 70%;
+    padding-right: 80%;
   }
   .card {
     margin-top: 40px;
@@ -20,4 +21,8 @@ body {
   }
   #signup_button {
     margin-left: 8%;
+  }
+  .scroll {
+    height:445px;
+    overflow-y: scroll;
   }
